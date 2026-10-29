@@ -1,0 +1,17 @@
+partition,scenario_def,scenario,n,motif_sign_ok,oh_rank_top1,median_oh_attr
+all,scenario,A,116,0.9741379310344828,0.9655172413793104,0.04708462767302985
+all,scenario,B,7,0.7142857142857143,1.0,0.0078511014580726
+all,scenario,C,1,1.0,1.0,0.067215122282505
+all,scenario,D,0,,,
+all,scenario_ensemble,A,113,0.9734513274336283,0.9646017699115044,0.0446334853768348
+all,scenario_ensemble,B,10,0.8,1.0,0.12705636397004125
+all,scenario_ensemble,C,1,1.0,1.0,0.067215122282505
+all,scenario_ensemble,D,0,,,
+test,scenario,A,2,1.0,1.0,0.15249324217438695
+test,scenario,B,0,,,
+test,scenario,C,0,,,
+test,scenario,D,0,,,
+test,scenario_ensemble,A,0,,,
+test,scenario_ensemble,B,2,1.0,1.0,0.15249324217438695
+test,scenario_ensemble,C,0,,,
+test,scenario_ensemble,D,0,,,

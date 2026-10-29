@@ -1,0 +1,7 @@
+Evaluation,Large errors (>1.5),Consensus SD,kNN distance,RF tree SD,Attribution disagreement,Random,Oracle,Ensemble-guaiacol gap,"Large errors caught by consensus SD, withhold 30%"
+Cultivar-stratified CV,10,0.559,0.583,0.586,0.669†,0.620†,0.425*,0.641†,0.80
+Cultivar hold-out,6,0.661,0.610,0.669,0.728,0.694,0.431*,0.640,0.33
+Sites held out,18,0.565,0.572,0.572,0.691†,0.627†,0.415*,0.641†,0.72
+Regions held out,34,0.620,0.624,0.687†,0.748†,0.722†,0.509*,0.768†,0.85
+"Train B, test A",5,0.780,0.846,0.784,0.989,0.985†,0.609*,0.886,0.60
+"Train A, test B",12,1.029,1.000,1.028,1.017,1.049,0.754*,1.126,0.25

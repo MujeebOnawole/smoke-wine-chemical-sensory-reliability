@@ -1,0 +1,13 @@
+Evaluation,Features,n,MAE four-phenol sum,R2 four-phenol sum,MAE ensemble,ens minus four (95% CI),verdict,large_err_rate four
+Cultivar-stratified CV,grape + wine,315,1.153,0.47,0.624,-0.716 to -0.355,ensemble lower,0.35
+Cultivar-stratified CV,grape,315,1.108,0.51,0.736,-0.511 to -0.227,ensemble lower,0.28
+Cultivar hold-out,grape + wine,63,1.638,-0.03,0.685,-1.197 to -0.716,ensemble lower,0.52
+Cultivar hold-out,grape,63,1.399,0.23,1.744,+0.165 to +0.529,four-phenol lower,0.4
+Sites held out,grape + wine,315,1.204,0.42,0.631,-0.751 to -0.388,ensemble lower,0.38
+Sites held out,grape,315,1.115,0.49,0.758,-0.498 to -0.219,ensemble lower,0.3
+Regions held out,grape + wine,315,1.387,0.29,0.741,-0.833 to -0.472,ensemble lower,0.44
+Regions held out,grape,315,1.17,0.47,0.82,-0.510 to -0.187,ensemble lower,0.37
+"Train B, test A",grape + wine,23,1.648,0.24,0.879,-1.060 to -0.482,ensemble lower,0.65
+"Train B, test A",grape,23,1.566,0.32,1.244,-0.515 to -0.138,ensemble lower,0.61
+"Train A, test B",grape + wine,40,1.273,0.23,1.061,-0.524 to +0.062,no difference,0.4
+"Train A, test B",grape,40,0.966,0.53,1.252,+0.072 to +0.502,four-phenol lower,0.2

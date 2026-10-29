@@ -1,0 +1,9 @@
+split,subset,n,positives,auroc,average_precision
+random,All test molecules,654,54,0.8715432098765432,0.5271783098604762
+random,With training twin (>= 0.99),179,4,0.9228571428571429,0.2404616724738676
+random,Without twin (< 0.99),475,50,0.8585882352941177,0.562753756282456
+random,Nearest training neighbour < 0.80,419,48,0.8551212938005391,0.5778620982974835
+scaffold,All test molecules,594,53,0.7940396889059393,0.3380919088791303
+scaffold,With training twin (>= 0.99),9,0,,
+scaffold,Without twin (< 0.99),585,53,0.7953433111079586,0.34007058044481325
+scaffold,Nearest training neighbour < 0.80,560,53,0.7973093669755499,0.3480360743150572

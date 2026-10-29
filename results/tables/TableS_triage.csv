@@ -1,0 +1,31 @@
+Evaluation,Abstention,Ranking,Threshold (mean),AUROC of score,Retained,Smoky retained,Smoky withheld,False negatives,False positives,Errors withheld,Accuracy
+Cultivar-stratified CV,0%,none,3.46,0.97,315,100,0,21,5,0,0.917
+Cultivar-stratified CV,20%,Consensus SD,3.46,0.97,250,57,43,13,3,10,0.936
+Cultivar-stratified CV,30%,Consensus SD,3.46,0.97,220,44,56,11,1,14,0.945
+Cultivar-stratified CV,30%,kNN distance,3.46,0.97,220,32,68,12,4,10,0.927
+Cultivar-stratified CV,30%,Random,3.46,0.97,220,76,24,15,3,8,0.918
+Cultivar hold-out,0%,none,3.45,0.96,63,20,0,2,2,0,0.937
+Cultivar hold-out,20%,Consensus SD,3.45,0.96,50,15,5,2,1,1,0.940
+Cultivar hold-out,30%,Consensus SD,3.45,0.96,44,12,8,2,1,1,0.932
+Cultivar hold-out,30%,kNN distance,3.45,0.96,44,10,10,2,0,2,0.955
+Cultivar hold-out,30%,Random,3.45,0.96,44,11,9,2,1,1,0.932
+Sites held out,0%,none,3.46,0.97,315,100,0,21,5,0,0.917
+Sites held out,20%,Consensus SD,3.46,0.97,250,63,37,15,4,7,0.924
+Sites held out,30%,Consensus SD,3.46,0.97,220,50,50,11,3,12,0.936
+Sites held out,30%,kNN distance,3.46,0.97,220,43,57,18,2,6,0.909
+Sites held out,30%,Random,3.46,0.97,220,80,20,19,3,4,0.900
+Regions held out,0%,none,3.39,0.97,315,100,0,18,6,0,0.924
+Regions held out,20%,Consensus SD,3.39,0.97,250,60,40,11,2,11,0.948
+Regions held out,30%,Consensus SD,3.39,0.97,220,46,54,5,1,18,0.973
+Regions held out,30%,kNN distance,3.39,0.97,220,43,57,13,0,11,0.941
+Regions held out,30%,Random,3.39,0.97,220,68,32,13,4,7,0.923
+"Train B, test A",0%,none,3.29,0.95,23,9,0,3,1,0,0.826
+"Train B, test A",20%,Consensus SD,3.29,0.95,18,5,4,2,1,1,0.833
+"Train B, test A",30%,Consensus SD,3.29,0.95,16,3,6,2,1,1,0.812
+"Train B, test A",30%,kNN distance,3.29,0.95,16,5,4,2,1,1,0.812
+"Train B, test A",30%,Random,3.29,0.95,16,7,2,3,1,0,0.750
+"Train A, test B",0%,none,3.70,0.98,40,11,0,0,4,0,0.900
+"Train A, test B",20%,Consensus SD,3.70,0.98,32,6,5,0,3,1,0.906
+"Train A, test B",30%,Consensus SD,3.70,0.98,28,5,6,0,2,2,0.929
+"Train A, test B",30%,kNN distance,3.70,0.98,28,4,7,0,2,2,0.929
+"Train A, test B",30%,Random,3.70,0.98,28,8,3,0,3,1,0.893

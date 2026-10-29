@@ -1,0 +1,19 @@
+Evaluation,Feature set A,Feature set B,Predictions,MAE A,MAE B,MAE A minus B,CI low,CI high,Share of predictions differing by >1 unit
+Cultivar hold-out,both,grape,63,0.69,1.74,-1.06,-1.32,-0.80,0.48
+Cultivar hold-out,both,wine,63,0.69,1.00,-0.32,-0.47,-0.16,0.27
+Cultivar hold-out,grape,wine,63,1.74,1.00,0.74,0.42,1.05,0.59
+Cultivar-stratified CV,both,grape,315,0.62,0.74,-0.11,-0.20,-0.02,0.05
+Cultivar-stratified CV,both,wine,315,0.62,0.68,-0.05,-0.13,0.02,0.02
+Cultivar-stratified CV,grape,wine,315,0.74,0.68,0.06,-0.08,0.18,0.17
+"Train A, test B",both,grape,40,1.06,1.25,-0.19,-0.39,-0.01,0.15
+"Train A, test B",both,wine,40,1.06,1.12,-0.06,-0.12,0.01,0.00
+"Train A, test B",grape,wine,40,1.25,1.12,0.13,-0.09,0.37,0.23
+"Train B, test A",both,grape,23,0.88,1.24,-0.36,-0.62,-0.14,0.22
+"Train B, test A",both,wine,23,0.88,1.11,-0.23,-0.44,-0.05,0.17
+"Train B, test A",grape,wine,23,1.24,1.11,0.14,-0.09,0.37,0.17
+Regions held out,both,grape,315,0.74,0.82,-0.08,-0.20,0.04,0.13
+Regions held out,both,wine,315,0.74,0.87,-0.13,-0.22,-0.05,0.03
+Regions held out,grape,wine,315,0.82,0.87,-0.05,-0.20,0.09,0.24
+Sites held out,both,grape,315,0.63,0.76,-0.13,-0.23,-0.03,0.05
+Sites held out,both,wine,315,0.63,0.69,-0.06,-0.13,0.00,0.00
+Sites held out,grape,wine,315,0.76,0.69,0.06,-0.07,0.21,0.14

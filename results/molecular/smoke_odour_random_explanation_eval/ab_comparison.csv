@@ -1,0 +1,13 @@
+partition,scenario_def,metric,n_A,n_B,rate_A,rate_B,fisher_p,risk_diff_A_minus_B,ci95_lo,ci95_hi
+all,scenario,motif_sign_ok,133,1,1.0,1.0,1.0,0.0,0.0,0.0
+all,scenario,oh_rank_top1,133,1,1.0,1.0,1.0,0.0,0.0,0.0
+all,scenario,consistent,4782,1082,0.9979088247595148,0.0,0.0,0.9979088247595148,0.9964450020911753,0.999163529903806
+all,scenario_ensemble,motif_sign_ok,122,12,1.0,1.0,1.0,0.0,0.0,0.0
+all,scenario_ensemble,oh_rank_top1,122,12,1.0,1.0,1.0,0.0,0.0,0.0
+all,scenario_ensemble,consistent,2704,3160,0.8738905325443787,0.7623417721518987,1.798141253283135e-28,0.11154876039247996,0.092232580892817,0.130132878623324
+test,scenario,motif_sign_ok,18,0,1.0,,,,,
+test,scenario,oh_rank_top1,18,0,1.0,,,,,
+test,scenario,consistent,483,105,0.9979296066252588,0.0,3.716261202258498e-117,0.9979296066252588,0.9937888198757764,1.0
+test,scenario_ensemble,motif_sign_ok,17,1,1.0,1.0,1.0,0.0,0.0,0.0
+test,scenario_ensemble,oh_rank_top1,17,1,1.0,1.0,1.0,0.0,0.0,0.0
+test,scenario_ensemble,consistent,262,326,0.8816793893129771,0.7699386503067485,0.0005155203306500065,0.1117407390062286,0.04978223200487053,0.17070200908537436

@@ -1,0 +1,29 @@
+__pycache__/
+*.py[cod]
+.ipynb_checkpoints/
+.DS_Store
+.venv/
+env/
+
+# Run outputs of the molecular pipeline are written next to the inputs and are not distributed.
+data/*_xai_full/
+data/*_xai_markers/
+data/*_classification_*/
+data/*_hyperparameter_*/
+data/*_report/
+data/*_explanation_eval/
+data/*.pt
+data/*.pkl
+data/*.db
+data/logs/
+data/profiling/
+data/wine_*/
+logs/
+figures/
+
+# Trained checkpoints (available on request), manuscript files and scheduler scripts are never shipped.
+*.ckpt
+*.docx
+*.pdf
+slurm/
+manuscript/

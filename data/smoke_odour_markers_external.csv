@@ -1,0 +1,11 @@
+PROCESSED_SMILES,COMPOUND_ID,TARGET,group,label_smoky,label_phenolic,MARKER_NAME,NN_TANIMOTO_TO_REMAINING,NN_SMILES
+COc1cc(C)ccc1O,FLAVOR_00064,1,external_marker,1,1,4-methylguaiacol,0.68,COc1ccc(C)cc1O
+Cc1ccccc1O,FLAVOR_00116,1,external_marker,1,1,o-cresol,0.6,Cc1cccc(O)c1C
+Cc1cccc(O)c1,FLAVOR_00172,1,external_marker,1,1,m-cresol,0.611,Oc1cccc(O)c1
+CCc1ccc(O)cc1,FLAVOR_00228,1,external_marker,1,1,4-ethylphenol,0.619,CCCc1ccc(O)cc1
+Cc1ccc(O)cc1,FLAVOR_00275,1,external_marker,1,1,p-cresol,0.615,Cc1ccc(C)cc1
+COc1ccccc1O,FLAVOR_00476,1,external_marker,1,1,guaiacol,0.632,COc1ccccc1OC
+COc1cccc(OC)c1O,FLAVOR_00867,1,external_marker,1,1,syringol,0.615,COc1cccc(C=O)c1O
+COc1cc(C)cc(OC)c1O,FLAVOR_01037,1,external_marker,1,1,4-methylsyringol,0.56,CCc1cc(OC)c(O)c(OC)c1
+CCc1ccc(O)c(OC)c1,FLAVOR_01068,1,external_marker,1,1,4-ethylguaiacol,0.724,CCCc1ccc(O)c(OC)c1
+Oc1ccccc1,FLAVOR_02098,1,external_marker,1,1,phenol,0.533,Oc1cccc(O)c1

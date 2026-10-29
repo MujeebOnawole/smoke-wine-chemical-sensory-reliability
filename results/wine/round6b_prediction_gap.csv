@@ -1,0 +1,13 @@
+Evaluation,Features,n,AUROC gap flags guaiacol discordance,AUROC consensus SD flags guaiacol discordance,Spearman gap vs guaiacol error,AUROC gap flags large ensemble error,AUROC consensus SD flags large ensemble error,"AURC ensemble error, ranked by gap","AURC ensemble error, ranked by consensus SD",AURC gap minus consensus (95% CI),Share of discordant predictions caught by top-30% gap,Precision of top-30% gap for discordance
+Cultivar-stratified CV,grape + wine,315,0.85,0.66,0.71,0.4,0.8,0.641,0.557,+0.004 to +0.173,0.57,0.73
+Cultivar-stratified CV,grape,315,0.65,0.53,0.31,0.39,0.57,0.784,0.731,-0.030 to +0.124,0.39,0.39
+Cultivar hold-out,grape + wine,63,0.96,0.75,0.78,0.68,0.51,0.64,0.661,-0.067 to +0.022,0.54,1.0
+Cultivar hold-out,grape,63,0.49,0.56,0.0,0.66,0.61,1.428,1.594,-0.350 to +0.023,0.26,0.37
+Sites held out,grape + wine,315,0.86,0.66,0.74,0.58,0.74,0.641,0.565,+0.003 to +0.153,0.58,0.78
+Sites held out,grape,315,0.63,0.44,0.29,0.45,0.47,0.799,0.782,-0.066 to +0.108,0.41,0.4
+Regions held out,grape + wine,315,0.77,0.61,0.57,0.41,0.88,0.768,0.614,+0.075 to +0.238,0.45,0.73
+Regions held out,grape,315,0.65,0.49,0.3,0.32,0.62,0.927,0.807,+0.024 to +0.209,0.44,0.55
+"Train B, test A",grape + wine,23,0.77,0.76,0.58,0.49,0.83,0.886,0.774,-0.013 to +0.210,0.43,0.86
+"Train B, test A",grape,23,0.52,0.64,0.28,0.52,0.72,1.292,1.193,-0.103 to +0.308,0.33,0.43
+"Train A, test B",grape + wine,40,0.77,0.48,0.46,0.46,0.48,1.126,1.029,-0.016 to +0.260,0.47,0.67
+"Train A, test B",grape,40,0.44,0.41,-0.1,0.54,0.44,1.22,1.318,-0.252 to +0.085,0.15,0.17

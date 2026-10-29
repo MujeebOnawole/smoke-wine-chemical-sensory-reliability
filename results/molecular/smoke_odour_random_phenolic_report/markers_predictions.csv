@@ -1,0 +1,11 @@
+MARKER_NAME,prob_Smoke_related,predicted_class_name,ensemble_agreement_ratio,xai_is_agreed,scenario,xai_ensemble_agreement,scenario_ensemble,NN_TANIMOTO_TO_REMAINING
+4-methylguaiacol,0.973515510559082,Smoke_related,1.0,True,A,0.9951920365881184,A,0.68
+o-cresol,0.980121612548828,Smoke_related,1.0,True,A,0.9903561753574692,A,0.6
+m-cresol,0.9678613543510436,Smoke_related,1.0,True,A,0.9272937194381397,A,0.611
+4-ethylphenol,0.9552533030509948,Smoke_related,1.0,True,A,0.9633652514597384,A,0.619
+p-cresol,0.9723275899887084,Smoke_related,1.0,True,A,0.9599964405553114,A,0.615
+guaiacol,0.984201729297638,Smoke_related,1.0,True,A,0.9988434591386136,A,0.632
+syringol,0.983691394329071,Smoke_related,1.0,True,A,0.9999489285968558,A,0.615
+4-methylsyringol,0.9680522680282592,Smoke_related,1.0,True,A,0.9996555582038154,A,0.56
+4-ethylguaiacol,0.9582502245903016,Smoke_related,1.0,True,A,0.9925570779119022,A,0.724
+phenol,0.9809056520462036,Smoke_related,1.0,True,A,1.0,A,0.533

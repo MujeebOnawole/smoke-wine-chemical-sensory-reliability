@@ -1,0 +1,20 @@
+# Wine-level analyses
+numpy
+pandas
+scipy
+scikit-learn
+statsmodels
+matplotlib
+seaborn
+
+# Molecular pipeline (install torch and torch_geometric as a matched pair for your CUDA version first)
+rdkit
+torch
+torch_geometric
+optuna
+sqlalchemy
+psutil
+
+# Data preparation only (reading supporting-information files)
+python-docx
+pymupdf
