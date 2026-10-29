@@ -26,9 +26,9 @@ except ImportError:
     print("WARNING: RDKit not available. SMILES canonicalization will be skipped.")
 
 BASE = Path(__file__).resolve().parent.parent
-PYRFUME = BASE / "QAAFI AI project _data" / "Taste_SmokeTaint" / "data" / "raw" / "pyrfume"
-FOODB_PROCESSED = BASE / "QAAFI AI project _data" / "Taste_SmokeTaint" / "data" / "processed"
-OUT = BASE / "QAAFI AI project _data" / "Taste_SmokeTaint" / "data" / "processed"
+PYRFUME = BASE / "Smoke_project" / "Taste_SmokeTaint" / "data" / "raw" / "pyrfume"
+FOODB_PROCESSED = BASE / "Smoke_project" / "Taste_SmokeTaint" / "data" / "processed"
+OUT = BASE / "Smoke_project" / "Taste_SmokeTaint" / "data" / "processed"
 OUT.mkdir(parents=True, exist_ok=True)
 
 
@@ -166,18 +166,25 @@ print(f"  {UNIFIED_LABELS}")
 
 
 def descriptors_to_labels(desc_set):
-    """Map a set of raw descriptors to unified label set."""
+    """Map a set of raw descriptors to unified label set.
+
+    Multi-word descriptors (e.g. "maraschino cherry", "woody burnt wood") are
+    matched on whole words only, collecting every matching category. Raw
+    substring matching was removed because it mislabelled short descriptors
+    ("red" -> charred -> smoky, "fir" -> campfire -> smoky, "can" -> candy).
+    """
     labels = set()
     for desc in desc_set:
         desc_lower = desc.lower().strip()
         if desc_lower in DESCRIPTOR_MAP:
             labels.add(DESCRIPTOR_MAP[desc_lower])
-        # Try partial matching for compound descriptors like "maraschino cherry"
-        else:
-            for key, val in DESCRIPTOR_MAP.items():
-                if key in desc_lower or desc_lower in key:
-                    labels.add(val)
-                    break
+            continue
+        words = desc_lower.split()
+        for key, val in DESCRIPTOR_MAP.items():
+            key_words = key.split()
+            n = len(key_words)
+            if any(words[i:i + n] == key_words for i in range(len(words) - n + 1)):
+                labels.add(val)
     return labels
 
 
@@ -195,6 +202,7 @@ foodb_flavors = foodb_long.groupby('smiles')['flavor_name'].apply(
 
 # Map to unified labels
 foodb_flavors['unified_labels'] = foodb_flavors['flavor_name'].apply(descriptors_to_labels)
+foodb_flavors = foodb_flavors[foodb_flavors['unified_labels'].apply(len) > 0].copy()
 foodb_flavors['source'] = 'foodb'
 
 # Canonicalize SMILES
@@ -217,10 +225,16 @@ fdb_beh = pd.read_csv(PYRFUME / "flavordb_behavior.csv")
 # Merge molecules with behavior
 fdb = fdb_mol.merge(fdb_beh, left_on='CID', right_on='Stimulus', how='inner')
 
-# Parse flavor and odor percepts
+# Parse flavor and odor percepts.
+# FlavorDB assigns the Flavor Percept "sweet" to ~22.6k of 25.6k compounds,
+# 21.9k of which carry no other descriptor, so it behaves as a default tag
+# rather than a sensory annotation. Drop it from Flavor Percepts; "sweet" in
+# Odor Percepts is kept. Compounds left with no descriptor are removed below,
+# so they no longer enter the dataset as unverified negatives.
+FLAVORDB_DEFAULT_FLAVOR_TAGS = {'sweet'}
 fdb['all_descriptors'] = fdb.apply(lambda r:
     parse_semicolon_descriptors(r.get('Odor Percepts', '')) |
-    parse_semicolon_descriptors(r.get('Flavor Percepts', '')),
+    (parse_semicolon_descriptors(r.get('Flavor Percepts', '')) - FLAVORDB_DEFAULT_FLAVOR_TAGS),
     axis=1)
 
 # Filter out compounds with no descriptors
