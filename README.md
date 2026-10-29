@@ -74,7 +74,8 @@ molecular/      RGCN smoke-odour classifier with substructure-masking attributio
                 Scenario A to D framework (flat modules, run from inside the folder)
 data_prep/      scripts that built the curated inputs from the source publications and databases
 data/           curated model inputs (wine table, odorant splits, external markers)
-results/        reference outputs of every stage, so each table in the paper can be traced
+results/        reference outputs of every stage, so each table in the paper can be traced,
+                plus data_checks/ for counts that support preprocessing decisions
 ```
 
 ### Wine level, `wine/`
@@ -124,7 +125,12 @@ and the publishers' supporting-information files, and their input paths reflect 
 publications, `add_wine_groups.py` and `add_wine_significance.py` add the hold-out groups and the
 studies' own smoky-versus-control significance calls, `consolidate_flavor_datasets.py` and
 `prepare_smoke_taint_data.py` merge the odorant databases and define the smoke-related label, and
-`make_smoke_odour_splits.py` writes the random and scaffold partitions.
+`make_smoke_odour_splits.py` writes the random and scaffold partitions. `flavordb_sweet_tag_check.py` recomputes, from the raw Pyrfume FlavorDB behaviour table, the counts behind one
+preprocessing decision. FlavorDB carries the flavour percept "sweet" on 22,596 of its 25,595 compounds, and
+21,899 of those have no other flavour or odour descriptor, so the tag behaves as a default rather than an
+annotation. The flavour percept "sweet" was therefore dropped before consolidation, the odour percept "sweet"
+(73 compounds) was kept, and compounds left without any descriptor were removed. The counts are in
+`results/data_checks/flavordb_sweet_tag_counts.csv`.
 
 ## Data
 

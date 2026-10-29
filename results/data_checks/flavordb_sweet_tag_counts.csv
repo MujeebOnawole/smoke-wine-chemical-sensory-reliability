@@ -1,0 +1,11 @@
+quantity,value
+FlavorDB compounds in the behaviour table,25595
+"flavour percept contains ""sweet""",22596
+"flavour percept is exactly ""sweet""",21927
+"flavour ""sweet"" with no other flavour or odour descriptor",21899
+"odour percept contains ""sweet"" (retained)",73
+both flavour and odour tagged sweet,33
+"either percept contains ""sweet""",22636
+no flavour and no odour descriptor at all,241
+second most frequent flavour percept string,bitter
+its count,596
